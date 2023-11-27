@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { global } from '../../types/globalState'
 import { useDispatch } from 'react-redux'
 import { updateRepoForm } from '../../redux/globalSlice'
+import { toast } from 'react-toastify';
 
 export default function RepoForm() {
   const dispatch = useDispatch()
@@ -20,6 +21,10 @@ export default function RepoForm() {
     }, [])
 
     const handleSearchCommits = () => {
+      if (repo === '' || user === '') {
+        toast.warn('Repository and user are mandatory')
+        return
+      }
       dispatch(updateRepoForm({
         user,
         repo,

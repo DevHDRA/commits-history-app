@@ -6,22 +6,22 @@ Token generation doc: https://docs.github.com/en/authentication/keeping-your-acc
 
 # Settings:
 
-Needs to install Node js (v.18.18.2), and Nestjs (v10.2.1)
+[Needs to install Node js (v.18.18.2)](https://nodejs.org/en/about/previous-releases), and [Nestjs (v10.2.1)](https://www.npmjs.com/package/@nestjs/cli)
 
 Frontend (commits-history-app-frontend folder) and backend (commits-history-app-backend folder) are in the same repo, in the root path there is a package json that have three npm commands:
-* install-app: Go throw the folders and install all the dependecies
-* start-backend: intialize the Nestjs backend
-* start-frontend: intialize the React js frontend
+* **install-app:** Go throw the folders and install all the dependecies
+* **start-backend:** intialize the Nestjs backend
+* **start-frontend:** intialize the React js frontend
 
 The backend will run in port 3000 by default and the frontend on 5173. 
 
-If you want to change the backend port change the value directly in code on file main.ts in root directory, line 9
+If you want to change the backend port change the value directly in code on file ```main.ts``` in root directory, line 9
 
 ```
 await app.listen(3000);
 ```
 
-If you change the backend port, change the variable BACKEND-PORT on commits-history-app-fronted/.env to maintain a connection witout any issue
+If you change the backend port, change the variable VITE_BACKEND-PORT on commits-history-app-fronted/.env to maintain a connection witout any issue
 
 
 This project was develop and tested with the next framework versions:
